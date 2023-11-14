@@ -16,49 +16,10 @@
               href="https://files.pythonhosted.org/"/>
   <repository type="tarball" name="lua.org"
               href="https://www.lua.org/ftp/"/>
+  <repository type="git" name="github-ssh"
+              href="git@github.com"/>
 
   <include href="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/modulesets-stable/gtk-osx.modules" />
-
-  <!-- Needed for Geany manual -->
-  <distutils id="docutils"
-             supports-non-srcdir-builds="no">
-    <branch repo="files.pythonhosted.org"
-            module="packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-${version}.tar.gz"
-            version="0.20.1"/>
-  </distutils>
-
-  <meson id="vte291" mesonargs="-Dicu=false -Dvapi=false -Dgtk4=false -D_b_symbolic_functions=false">
-    <branch repo="download.gitlab.gnome.org"
-            module="vte/-/archive/${version}/vte-${version}.tar.bz2" 
-            version="0.74.0">
-      <!-- Make paths relative to bundle (fallback to system paths if not found) -->
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/vte_2.91_relpath.patch" strip="1" />
-    </branch>
-    <dependencies>
-      <dep package="libpcre2" />
-      <dep package="gnutls" />
-    </dependencies>
-  </meson>
-
-  <!-- Used by the git-changebar plugin -->
-  <cmake id="libgit2"
-         cmakeargs="-DCMAKE_INSTALL_NAME_DIR=${PREFIX}/lib">
-    <branch repo="download.github.com" 
-            module="libgit2/libgit2/archive/refs/tags/v${version}.tar.gz"
-            checkoutdir="libgit2-${version}"
-            version="1.7.1"/>
-  </cmake>
-
-  <autotools id="lua"
-             makeargs="macosx"
-             skip-autogen="true"
-             supports-non-srcdir-builds="no">
-    <branch repo="lua.org"
-            module="lua-5.1.5.tar.gz"
-            version="5.1.5">
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/lua51_set_correct_install_prefix.patch" strip="1" />
-    </branch>
-  </autotools>
 
   <!-- The mac integration library with a fix for radio menu items -->
   <autotools id="gtk-mac-integration-fixed" 
@@ -86,33 +47,24 @@
 
   <metamodule id="geany-deps">
     <dependencies>
-      <dep package="vte291" />
-      <dep package="docutils" />
       <dep package="meta-gtk-osx-gtk3-core-themes" />
       <dep package="gtk-mac-bundler" />
       <dep package="gtk-mac-integration-fixed" />
-      <!-- mime information for g_content_type_guess() -->
-      <dep package="shared-mime-info" />
+      <dep package="openssl" />
     </dependencies>
   </metamodule>
 
   <!-- Geany from git master - use tarball download otherwise patches don't work -->
-  <meson id="geany-git" mesonargs="-Dmac-integration=enabled">
-    <branch repo="download.github.com"
-            module="geany/geany/archive/refs/heads/master.tar.gz"
-            rename-tarball="geany-git.tar.gz"
-            checkoutdir="geany-git"
-            version="master" >
-      <!-- This patch corresponds to https://github.com/geany/geany/pull/2363 -->
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_config_shell.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_scintilla_candidate_window_pos.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_vte_login_shell.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_scintilla_block_copy.patch" strip="1" />
+  <cmake id="geany-git" cmakeargs="-DCMAKE_BUILD_TYPE=Release">
+    <branch repo="github-ssh"
+            module="tuduongquyet/uget2"
+            checkoutdir="uget2-git"
+            tag="3c0d448d9ca4a9bfe1c753f253ad4300c80df27c" >
     </branch>
     <dependencies>
       <dep package="geany-deps" />
     </dependencies>
-  </meson>
+  </cmake>
 
   <!-- Geany tarball release -->
   <autotools id="geany-release"
@@ -133,62 +85,17 @@
     </dependencies>
   </autotools>
 
-  <metamodule id="geany-plugins-deps">
-    <dependencies>
-      <dep package="vala" />
-      <dep package="libgit2" />
-      <dep package="hunspell" />
-      <dep package="enchant" />
-      <dep package="lua" />
-    </dependencies>
-  </metamodule>
-
-  <!-- Geany-plugins from git master - use tarball download otherwise patches don't work -->
-  <autotools id="geany-plugins-git"
-             supports-non-srcdir-builds="no">
-    <branch repo="download.github.com"
-            module="geany/geany-plugins/archive/refs/heads/master.tar.gz"
-            rename-tarball="geany-plugins-git.tar.gz"
-            checkoutdir="geany-plugins-git"
-            version="master" >
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_plugins_spellcheck_relocation.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_plugins_geanylua_link_against_statically_built_liblua.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_plugins_geanylua_make_lib_data_directories_relocatable.patch" strip="1" />
-    </branch>
-    <dependencies>
-      <dep package="geany-git" />
-      <dep package="geany-plugins-deps" />
-    </dependencies>
-  </autotools>
-
-  <!-- Geany-plugins tarball release -->
-  <autotools id="geany-plugins-release"
-             supports-non-srcdir-builds="no">
-    <branch repo="download.geany.org"
-            module="geany-plugins/geany-plugins-${version}.tar.bz2"
-            checkoutdir="geany-plugins-${version}"
-            version="2.0">
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_plugins_spellcheck_relocation.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_plugins_geanylua_link_against_statically_built_liblua.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_plugins_geanylua_make_lib_data_directories_relocatable.patch" strip="1" />
-    </branch>
-    <dependencies>
-      <dep package="geany-release" />
-      <dep package="geany-plugins-deps" />
-    </dependencies>
-  </autotools>
-
   <!-- Build everything necessary for Geany bundle from git -->
   <metamodule id="geany-bundle-git">
     <dependencies>
-      <dep package="geany-plugins-git" />
+      <dep package="geany-git" />
     </dependencies>
   </metamodule>
 
   <!-- Build everything necessary for Geany bundle from release tarballs -->
   <metamodule id="geany-bundle-release">
     <dependencies>
-      <dep package="geany-plugins-release" />
+      <dep package="geany-release" />
     </dependencies>
   </metamodule>
 
