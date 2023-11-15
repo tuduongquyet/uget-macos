@@ -101,7 +101,7 @@ def print_plist_entry(lang, ext_set):
 	print(padding + '</array>')
 
 	print(padding + '<key>CFBundleTypeIconFile</key>')
-	print(padding + '<string>Geany.icns</string>')
+	print(padding + '<string>uGet.icns</string>')
 	print(padding + '<key>CFBundleTypeRole</key>')
 	print(padding + '<string>Editor</string>')
 	print(padding + '<key>LSHandlerRank</key>')

@@ -7,16 +7,16 @@
 	<key>CFBundleVersion</key>
 	<string>2.0</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright 2023 The Geany Team, GNU General Public License</string>
+	<string>Copyright 2023 The uGet Team, GNU General Public License</string>
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleName</key>
-	<string>Geany</string>
+	<string>uGet</string>
 	<key>CFBundleExecutable</key>
 	<string>geany</string>
 	<key>CFBundleIconFile</key>
-	<string>Geany.icns</string>
+	<string>uGet.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>org.geany.geany</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -45,9 +45,9 @@
 			<key>UTTypeReferenceURL</key>
 			<string>https://www.geany.org/</string>
 			<key>UTTypeDescription</key>
-			<string>Geany project</string>
+			<string>uGet project</string>
 			<key>UTTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.text</string>
@@ -73,7 +73,7 @@
 
 	<key>CFBundleDocumentTypes</key>
 	<array>
-		<!-- Register Geany as editor/owner of the .geany extension -->
+		<!-- Register uGet as editor/owner of the .geany extension -->
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -86,13 +86,13 @@
 				<string>org.geany.geany</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeExtensions</key>
 			<array>
 				<string>geany</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>Geany project</string>
+			<string>uGet project</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
 				<string>text/x-geany</string>
@@ -112,7 +112,7 @@
 				<string>txt</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -128,7 +128,7 @@
 				<string>****</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -145,7 +145,7 @@
 				<string>inp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -160,7 +160,7 @@
 				<string>abp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -174,7 +174,7 @@
 				<string>as</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -189,7 +189,7 @@
 				<string>ads</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -204,7 +204,7 @@
 				<string>pde</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -219,7 +219,7 @@
 				<string>asciidoc</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -238,7 +238,7 @@
 				<string>sx</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -252,7 +252,7 @@
 				<string>au3</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -268,7 +268,7 @@
 				<string>nt</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -282,7 +282,7 @@
 				<string>bib</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -297,7 +297,7 @@
 				<string>mli</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -312,7 +312,7 @@
 				<string>xpm</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -336,7 +336,7 @@
 				<string>hxx</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -352,7 +352,7 @@
 				<string>cljs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -368,7 +368,7 @@
 				<string>h</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -382,7 +382,7 @@
 				<string>cs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -397,7 +397,7 @@
 				<string>ctest</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -414,7 +414,7 @@
 				<string>cpy</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -432,7 +432,7 @@
 				<string>iced.erb</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -450,7 +450,7 @@
 				<string>properties</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -464,7 +464,7 @@
 				<string>css</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -480,7 +480,7 @@
 				<string>pyx</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -495,7 +495,7 @@
 				<string>di</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -511,7 +511,7 @@
 				<string>rej</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -525,7 +525,7 @@
 				<string>docbook</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -540,7 +540,7 @@
 				<string>hrl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -563,7 +563,7 @@
 				<string>ftn</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -578,7 +578,7 @@
 				<string>fth</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -599,7 +599,7 @@
 				<string>f95</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -615,7 +615,7 @@
 				<string>vbs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -629,7 +629,7 @@
 				<string>gd</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -643,7 +643,7 @@
 				<string>gs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -659,7 +659,7 @@
 				<string>vert</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -673,7 +673,7 @@
 				<string>go</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -688,7 +688,7 @@
 				<string>gv</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -703,7 +703,7 @@
 				<string>groovy</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -720,7 +720,7 @@
 				<string>lhs-boot</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -734,7 +734,7 @@
 				<string>hx</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -755,7 +755,7 @@
 				<string>tpl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -770,7 +770,7 @@
 				<string>jsp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -784,7 +784,7 @@
 				<string>js</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -798,7 +798,7 @@
 				<string>json</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -812,7 +812,7 @@
 				<string>jl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -827,7 +827,7 @@
 				<string>kts</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -846,7 +846,7 @@
 				<string>tex</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -861,7 +861,7 @@
 				<string>lisp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -875,7 +875,7 @@
 				<string>lua</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -890,7 +890,7 @@
 				<string>mk</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -912,7 +912,7 @@
 				<string>mkdn</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -926,7 +926,7 @@
 				<string>m</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -940,7 +940,7 @@
 				<string>nim</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -955,7 +955,7 @@
 				<string>nsi</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -971,7 +971,7 @@
 				<string>mm</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -989,7 +989,7 @@
 				<string>pp</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1007,7 +1007,7 @@
 				<string>pod</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1025,7 +1025,7 @@
 				<string>phtml</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1040,7 +1040,7 @@
 				<string>pot</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1055,7 +1055,7 @@
 				<string>pyw</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1070,7 +1070,7 @@
 				<string>psm1</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1086,7 +1086,7 @@
 				<string>rst</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1101,7 +1101,7 @@
 				<string>r</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1115,7 +1115,7 @@
 				<string>rs</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1132,7 +1132,7 @@
 				<string>ruby</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1147,7 +1147,7 @@
 				<string>scl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1170,7 +1170,7 @@
 				<string>zsh</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1184,7 +1184,7 @@
 				<string>st</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1198,7 +1198,7 @@
 				<string>sql</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1212,7 +1212,7 @@
 				<string>swift</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1229,7 +1229,7 @@
 				<string>wish</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1243,7 +1243,7 @@
 				<string>t2t</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1257,7 +1257,7 @@
 				<string>ts</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1272,7 +1272,7 @@
 				<string>vapi</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1286,7 +1286,7 @@
 				<string>v</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1301,7 +1301,7 @@
 				<string>vhdl</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1325,7 +1325,7 @@
 				<string>xul</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1340,7 +1340,7 @@
 				<string>yml</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>
@@ -1354,7 +1354,7 @@
 				<string>zep</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>Geany.icns</string>
+			<string>uGet.icns</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>LSHandlerRank</key>

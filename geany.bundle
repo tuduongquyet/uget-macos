@@ -76,12 +76,12 @@
     ${prefix}/lib/enchant-2/*.so
   </binary>
 
-  <!-- Geany's plugins -->
+  <!-- uGet's plugins -->
   <binary>
     ${prefix}/lib/geany/*.so
   </binary>
 
-  <!-- Geanylua -->
+  <!-- uGetlua -->
   <binary>
     ${prefix}/lib/geany-plugins/geanylua/*.so
   </binary>
@@ -129,19 +129,19 @@
        "${bundle}", which refers to the bundle root directory.
   -->
 
-  <!-- Geany's data files; glade, fildefs, default tags, etc. -->
+  <!-- uGet's data files; glade, fildefs, default tags, etc. -->
   <data>
     ${prefix}/share/geany
   </data>
-  <!-- Geany plugin's data files -->
+  <!-- uGet plugin's data files -->
   <data>
     ${prefix}/share/geany-plugins
   </data>
-  <!-- Geany documentation -->
+  <!-- uGet documentation -->
   <data>
     ${prefix}/share/doc/geany
   </data>
-  <!-- Geany plugin documentation -->
+  <!-- uGet plugin documentation -->
   <data>
     ${prefix}/share/doc/geany-plugins
   </data>
@@ -179,7 +179,7 @@
        /Developer/Applications/Utilities/Icon Composer.app to import
        artwork and create the file. -->
   <data dest="${bundle}/Contents/Resources">
-    ${project}/Geany.icns
+    ${project}/uGet.icns
   </data>
 
   <data>

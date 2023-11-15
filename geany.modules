@@ -54,7 +54,7 @@
     </dependencies>
   </metamodule>
 
-  <!-- Geany from git master - use tarball download otherwise patches don't work -->
+  <!-- uGet from git master - use tarball download otherwise patches don't work -->
   <autotools id="geany-git">
     <branch repo="github-ssh" autogen-sh="autoreconf" supports-non-srcdir-builds="no"
             module="tuduongquyet/uget2.git"
@@ -65,7 +65,7 @@
     </dependencies>
   </autotools>
 
-  <!-- Geany tarball release -->
+  <!-- uGet tarball release -->
   <autotools id="geany-release"
              autogen-sh="configure"
              supports-non-srcdir-builds="no">
@@ -79,14 +79,14 @@
     </dependencies>
   </autotools>
 
-  <!-- Build everything necessary for Geany bundle from git -->
+  <!-- Build everything necessary for uGet bundle from git -->
   <metamodule id="geany-bundle-git">
     <dependencies>
       <dep package="geany-git" />
     </dependencies>
   </metamodule>
 
-  <!-- Build everything necessary for Geany bundle from release tarballs -->
+  <!-- Build everything necessary for uGet bundle from release tarballs -->
   <metamodule id="geany-bundle-release">
     <dependencies>
       <dep package="geany-release" />

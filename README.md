@@ -1,18 +1,18 @@
-Geany for macOS
+uGet for macOS
 ===============
-Geany for macOS is a project that contains all the necessary configuration
-files, themes, scripts and instructions to create the Geany app bundle and 
+uGet for macOS is a project that contains all the necessary configuration
+files, themes, scripts and instructions to create the uGet app bundle and 
 a dmg installer image for macOS.
 
 Binaries
 --------
-The macOS binaries can be downloaded from the Geany Releases page:
+The macOS binaries can be downloaded from the uGet Releases page:
 
 <https://www.geany.org/Download/Releases>
 
 Configuration
 -------------
-In addition to standard Geany configuration, the macOS bundle creates
+In addition to standard uGet configuration, the macOS bundle creates
 its own configuration file under `~/.config/geany/geany_mac.conf` upon
 first start. In this configuration file it is for instance possible
 to override the used theme (light/dark) when autodetection based on
@@ -24,12 +24,12 @@ A brief description of the contents of the project directory:
 
 ### Directories
 *	*Launcher*: A binary launcher which is used to set up environment
-	variables to run Geany.
+	variables to run uGet.
 *	*Prof-Gnome*: Prof-Gnome 3.6 GTK 3 Theme with minor modifications
 *	*Papirus, Papirus-Dark*: Papirus GTK 3 icon theme with lots of unneeded
 	icons removed to save space.
-*	*macos-icon-design*: design file for macOS Geany icon.
-*	*iconbuilder.iconset*: source Geany icons for the bundle.
+*	*macos-icon-design*: design file for macOS uGet icon.
+*	*iconbuilder.iconset*: source uGet icons for the bundle.
 *	*modulesets-stable, patches*: copy of the modulesets-stable and patches 
     directory from the [gtk-osx](https://gitlab.gnome.org/GNOME/gtk-osx/)
 	project containing dependency specifications. Since the upstram project 
@@ -44,7 +44,7 @@ A brief description of the contents of the project directory:
 	configuration including file types the application can open.
 *	*geany.bundle*: configuration file describing the contents of the app bundle.
 *	*geany.entitlements*: runtime hardening entitlements file.
-*	*geany.modules*: JHBuild modules file with Geany dependencies.
+*	*geany.modules*: JHBuild modules file with uGet dependencies.
 *	*settings.ini*: default theme configuration file for GTK 3. 
 
 ### Scripts
@@ -63,7 +63,7 @@ please visit
 *	<https://gitlab.gnome.org/GNOME/gtk-mac-bundler/>
 
 The HOWTO below contains just the portions necessary/relevant for
-building and bundling Geany.
+building and bundling uGet.
 
 Prerequisities
 --------------
@@ -123,14 +123,14 @@ To create the bundle, you need to first install JHBuild and GTK as described bel
 	```
 	The upstream project is sometimes in an unstable state and fails to build;
 	if this happens, you can use our snapshot of modulesets which was used
-	to build the last release of Geany:
+	to build the last release of uGet:
 	```
 	jhbuild bootstrap-gtk-osx && jhbuild -m "https://raw.githubusercontent.com/geany/geany-osx/master/modulesets-stable/gtk-osx.modules" build meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
 	```
 
-7.	To build Geany, plugins and all of their dependencies, run one of
+7.	To build uGet, plugins and all of their dependencies, run one of
 	the following commands inside the `geany-osx` directory  depending on
-	whether to use Geany sources from the latest release tarball or current
+	whether to use uGet sources from the latest release tarball or current
 	git master:
 	* **tarball**
 		```
@@ -157,7 +157,7 @@ Bundling
 
 	*Steps 3 and 4 of this section assume you are running from within the jhbuild shell.*
 
-3.	To bundle all available Geany themes, get them from
+3.	To bundle all available uGet themes, get them from
 
 	<https://github.com/geany/geany-themes>
 
@@ -223,7 +223,7 @@ have to be performed during normal bundle/installer creation:
 	and run the script. Copy the output of the script to the marked
 	place in `Info.plist`.
 
-*	Before the release, update the Geany version and copyright years inside
+*	Before the release, update the uGet version and copyright years inside
 	`Info.plist` and `create_dmg.sh`. Also update the `-release` targets in
 	`geany.modules` file to point to the new release. Dependencies inside
 	`geany.modules` can also be updated to newer versions.

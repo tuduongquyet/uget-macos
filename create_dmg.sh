@@ -2,14 +2,14 @@
 
 VERSION="2.0"
 
-NAME="Geany"
-ICONNAME="Geany.icns"
+NAME="uGet"
+ICONNAME="uGet.icns"
 VOLNAME="${NAME} ${VERSION}"
 DMGNAME="geany-${VERSION}_osx.dmg"
 APPNAME="${NAME}.app"
 TMPDIR="tmp-out"
 
-FILE_TYPE=`file Geany.app/Contents/MacOS/geany`
+FILE_TYPE=`file uGet.app/Contents/MacOS/geany`
 if [[ "$FILE_TYPE" == *"arm64"* ]]; then
 	DMGNAME="geany-${VERSION}_osx_arm64.dmg"
 fi

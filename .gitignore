@@ -1,6 +1,6 @@
-Geany*.app
-Geany*.dmg
-Geany.icns
+uGet*.app
+uGet*.dmg
+uGet.icns
 Launcher/geany/build/
 xcuserdata/
 .DS_Store

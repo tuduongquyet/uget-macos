@@ -90,7 +90,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = Geany;
+				ORGANIZATIONNAME = uGet;
 				TargetAttributes = {
 					B12DCC462350EF9300301186 = {
 						CreatedOnToolsVersion = 11.1;
