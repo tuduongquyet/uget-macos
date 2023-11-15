@@ -5,13 +5,13 @@ VERSION="2.0"
 NAME="uGet"
 ICONNAME="uGet.icns"
 VOLNAME="${NAME} ${VERSION}"
-DMGNAME="geany-${VERSION}_osx.dmg"
+DMGNAME="uget-${VERSION}_osx.dmg"
 APPNAME="${NAME}.app"
 TMPDIR="tmp-out"
 
-FILE_TYPE=`file uGet.app/Contents/MacOS/geany`
+FILE_TYPE=`file uGet.app/Contents/MacOS/uget`
 if [[ "$FILE_TYPE" == *"arm64"* ]]; then
-	DMGNAME="geany-${VERSION}_osx_arm64.dmg"
+	DMGNAME="uget-${VERSION}_osx_arm64.dmg"
 fi
 
 mkdir "$TMPDIR"

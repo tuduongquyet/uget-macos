@@ -8,12 +8,12 @@ Binaries
 --------
 The macOS binaries can be downloaded from the uGet Releases page:
 
-<https://www.geany.org/Download/Releases>
+<https://www.uget.org/Download/Releases>
 
 Configuration
 -------------
 In addition to standard uGet configuration, the macOS bundle creates
-its own configuration file under `~/.config/geany/geany_mac.conf` upon
+its own configuration file under `~/.config/uget/uget_mac.conf` upon
 first start. In this configuration file it is for instance possible
 to override the used theme (light/dark) when autodetection based on
 system macOS theme is not desired.
@@ -35,16 +35,16 @@ A brief description of the contents of the project directory:
 	project containing dependency specifications. Since the upstram project 
 	is sometimes in an unstable state, this allows us to make a snapshot of
 	a working configuration for our build.
-*	*geany_patches*: various patches fixing dependencies to enable bundling.
+*	*uget_patches*: various patches fixing dependencies to enable bundling.
 *	*utils*: various utility scripts.
 
 ### Configuration files
 *	*Info.plist*: macOS application configuration file containing some basic
 	information such as application name, version, etc. but also additional
 	configuration including file types the application can open.
-*	*geany.bundle*: configuration file describing the contents of the app bundle.
-*	*geany.entitlements*: runtime hardening entitlements file.
-*	*geany.modules*: JHBuild modules file with uGet dependencies.
+*	*uget.bundle*: configuration file describing the contents of the app bundle.
+*	*uget.entitlements*: runtime hardening entitlements file.
+*	*uget.modules*: JHBuild modules file with uGet dependencies.
 *	*settings.ini*: default theme configuration file for GTK 3. 
 
 ### Scripts
@@ -117,7 +117,7 @@ To create the bundle, you need to first install JHBuild and GTK as described bel
 	ARM binaries on Intel processors.
 
 6.	Install GTK and all of its dependencies by running the following
-	command inside the `geany-osx` directory:
+	command inside the `uget-osx` directory:
 	```
 	jhbuild bootstrap-gtk-osx && jhbuild build meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
 	```
@@ -125,29 +125,29 @@ To create the bundle, you need to first install JHBuild and GTK as described bel
 	if this happens, you can use our snapshot of modulesets which was used
 	to build the last release of uGet:
 	```
-	jhbuild bootstrap-gtk-osx && jhbuild -m "https://raw.githubusercontent.com/geany/geany-osx/master/modulesets-stable/gtk-osx.modules" build meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
+	jhbuild bootstrap-gtk-osx && jhbuild -m "https://raw.githubusercontent.com/uget/uget-osx/master/modulesets-stable/gtk-osx.modules" build meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
 	```
 
 7.	To build uGet, plugins and all of their dependencies, run one of
-	the following commands inside the `geany-osx` directory  depending on
+	the following commands inside the `uget-osx` directory  depending on
 	whether to use uGet sources from the latest release tarball or current
 	git master:
 	* **tarball**
 		```
-		jhbuild -m `pwd`/geany.modules build geany-bundle-release
+		jhbuild -m `pwd`/uget.modules build uget-bundle-release
 		```
 	* **git master**
 		```
-		jhbuild -m `pwd`/geany.modules build geany-bundle-git
+		jhbuild -m `pwd`/uget.modules build uget-bundle-git
 		```
 
 Bundling
 --------
 1.  To build the launcher binary, run
 	```
-	xcodebuild ARCHS=`uname -m` -project Launcher/geany/geany.xcodeproj clean build
+	xcodebuild ARCHS=`uname -m` -project Launcher/uget/uget.xcodeproj clean build
 	```
-	inside the `geany-osx` directory.
+	inside the `uget-osx` directory.
 
 2.	Run
 	```
@@ -159,11 +159,11 @@ Bundling
 
 3.	To bundle all available uGet themes, get them from
 
-	<https://github.com/geany/geany-themes>
+	<https://github.com/uget/uget-themes>
 
-	and copy the `colorschemes` directory under `$PREFIX/share/geany`.
+	and copy the `colorschemes` directory under `$PREFIX/share/uget`.
 
-4.	Inside the `geany-osx` directory run the following command to create
+4.	Inside the `uget-osx` directory run the following command to create
 	the app bundle:
 	```
 	./bundle.sh
@@ -198,7 +198,7 @@ Distribution
 	```
 	./create_dmg.sh
 	```
-	from within the `geany-osx` directory. If the `SIGN_CERTIFICATE` variable is
+	from within the `uget-osx` directory. If the `SIGN_CERTIFICATE` variable is
 	defined (see above), the image gets signed by the specified certificate.
 
 3.	Optionally, to get the image notarized by
@@ -225,8 +225,8 @@ have to be performed during normal bundle/installer creation:
 
 *	Before the release, update the uGet version and copyright years inside
 	`Info.plist` and `create_dmg.sh`. Also update the `-release` targets in
-	`geany.modules` file to point to the new release. Dependencies inside
-	`geany.modules` can also be updated to newer versions.
+	`uget.modules` file to point to the new release. Dependencies inside
+	`uget.modules` can also be updated to newer versions.
 
 *	Copy `modulesets-stable` from [gtk-osx](https://gitlab.gnome.org/GNOME/gtk-osx/)
 	into this project to get the latest dependencies (if it builds) and

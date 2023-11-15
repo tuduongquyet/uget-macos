@@ -1,4 +1,4 @@
-geany-osx contains parts from other projects which are licensed under
+uget-osx contains parts from other projects which are licensed under
 their original licenses:
 
 Papirus icon theme:
@@ -9,5 +9,5 @@ Prof-Gnome GTK Theme:
 	GPLv2
 	https://github.com/paullinuxthemer/Prof-Gnome
 
-The rest of the geany-osx project (scripts, configuration files, etc.):
+The rest of the uget-osx project (scripts, configuration files, etc.):
 	public domain

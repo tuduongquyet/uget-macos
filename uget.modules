@@ -10,8 +10,8 @@
               href="https://gitlab.gnome.org/GNOME/"/>
   <repository type="tarball" name="download.github.com"
               href="https://github.com/"/>
-  <repository type="tarball" name="download.geany.org"
-              href="https://download.geany.org/"/>
+  <repository type="tarball" name="download.uget.org"
+              href="https://download.uget.org/"/>
   <repository type="tarball" name="files.pythonhosted.org"
               href="https://files.pythonhosted.org/"/>
   <repository type="tarball" name="lua.org"
@@ -29,7 +29,7 @@
             module="gtk-mac-integration/3.0/gtk-mac-integration-${version}.tar.xz"
             checkoutdir="gtk-mac-integration-fixed"
             version="3.0.1">
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/gtk_mac_integration_radio_fix.patch" strip="1" />
+      <patch file="https://github.com/uget/uget-osx/raw/master/uget_patches/gtk_mac_integration_radio_fix.patch" strip="1" />
     </branch>
   </autotools>  
   
@@ -45,7 +45,7 @@
     </branch>
   </autotools>
 
-  <metamodule id="geany-deps">
+  <metamodule id="uget-deps">
     <dependencies>
       <dep package="meta-gtk-osx-gtk3" />
       <dep package="gtk-mac-bundler" />
@@ -55,18 +55,18 @@
   </metamodule>
 
   <!-- uGet from git master - use tarball download otherwise patches don't work -->
-  <autotools id="geany-git">
+  <autotools id="uget-git">
     <branch repo="github-ssh" autogen-sh="autoreconf" supports-non-srcdir-builds="no"
             module="tuduongquyet/uget2.git"
             tag="f4f21799d534cb7820a08f8bbdbccf99c75f2605" >
     </branch>
     <dependencies>
-      <dep package="geany-deps" />
+      <dep package="uget-deps" />
     </dependencies>
   </autotools>
 
   <!-- uGet tarball release -->
-  <autotools id="geany-release"
+  <autotools id="uget-release"
              autogen-sh="configure"
              supports-non-srcdir-builds="no">
     <branch repo="download.github.com"
@@ -75,21 +75,21 @@
             hash="sha256:10f7fd2ae646bfa194916154efde77700d4a02e6bd8eeea8df3c57c6c83efab4">
     </branch>
     <dependencies>
-      <dep package="geany-deps" />
+      <dep package="uget-deps" />
     </dependencies>
   </autotools>
 
   <!-- Build everything necessary for uGet bundle from git -->
-  <metamodule id="geany-bundle-git">
+  <metamodule id="uget-bundle-git">
     <dependencies>
-      <dep package="geany-git" />
+      <dep package="uget-git" />
     </dependencies>
   </metamodule>
 
   <!-- Build everything necessary for uGet bundle from release tarballs -->
-  <metamodule id="geany-bundle-release">
+  <metamodule id="uget-bundle-release">
     <dependencies>
-      <dep package="geany-release" />
+      <dep package="uget-release" />
     </dependencies>
   </metamodule>
 

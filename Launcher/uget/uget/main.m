@@ -1,6 +1,6 @@
 /*
  can also be compiled using
- clang -fobjc-arc $OBJCFLAGS $LDFLAGS -framework Foundation -framework Cocoa Launcher/geany/geany/main.m -o Launcher/geany/build/Release/geany
+ clang -fobjc-arc $OBJCFLAGS $LDFLAGS -framework Foundation -framework Cocoa Launcher/uget/uget/main.m -o Launcher/uget/build/Release/uget
  */
 
 #import <Foundation/Foundation.h>
@@ -9,8 +9,8 @@
 #include <dlfcn.h>
 #include <limits.h>
 
-#define GEANY_CONFIG_DIR [@"~/.config/geany" stringByExpandingTildeInPath]
-#define CONFIG_FILE [GEANY_CONFIG_DIR stringByAppendingPathComponent: @"geany_mac.conf"]
+#define uget_CONFIG_DIR [@"~/.config/uget" stringByExpandingTildeInPath]
+#define CONFIG_FILE [uget_CONFIG_DIR stringByAppendingPathComponent: @"uget_mac.conf"]
 
 #define THEME_KEY @"theme"
 #define LOCALE_KEY @"locale"
@@ -129,7 +129,7 @@ static BOOL write_gtk_config(void) {
                             light ? @"0" : @"1",
                             light ? @"Papirus" : @"Papirus-Dark"];
 
-    return write_to_file(gtk_config, [GEANY_CONFIG_DIR stringByAppendingPathComponent: @"gtk-3.0/settings.ini"]);
+    return write_to_file(gtk_config, [uget_CONFIG_DIR stringByAppendingPathComponent: @"gtk-3.0/settings.ini"]);
 }
 
 
@@ -186,7 +186,7 @@ static int fill_argv_array(const char *arr[], NSArray<NSString *> *array) {
 }
 
 
-static int run_geany(void) {
+static int run_uget(void) {
     config = @{
         THEME_KEY: [ConfigValue valueWithDefault:@"0" comment:@"0: automatic selection based on system settings (requires uGet restart when changed, macOS 10.14+); 1: light; 2: dark; make sure there's no ~/.config/gtk-3.0/settings.ini file, otherwise it overrides the settings made here"],
         LOCALE_KEY: [ConfigValue valueWithDefault:@"" comment:@"no value: autodetect; locale string: locale to be used (e.g. en_US.UTF-8)"],
@@ -208,7 +208,7 @@ static int run_geany(void) {
     //set environment variables
     //see https://developer.gnome.org/gtk3/stable/gtk-running.html
     NSMutableDictionary<NSString *, NSString *> *env = [@{
-        @"XDG_CONFIG_DIRS": have_gtk_config ? GEANY_CONFIG_DIR : bundle_etc,  /* used to locate gtk settings.ini */
+        @"XDG_CONFIG_DIRS": have_gtk_config ? uget_CONFIG_DIR : bundle_etc,  /* used to locate gtk settings.ini */
         @"XDG_DATA_DIRS": bundle_share,
 
         @"GIO_MODULE_DIR": [bundle_lib stringByAppendingPathComponent: @"gio/modules"],
@@ -225,7 +225,7 @@ static int run_geany(void) {
         @"LC_ALL": lang,
         
         //TODO: replace with XDG_DATA_DIRS in uGet
-        @"GEANY_PLUGINS_SHARE_PATH": [bundle_share stringByAppendingPathComponent: @"geany-plugins"],
+        @"uget_PLUGINS_SHARE_PATH": [bundle_share stringByAppendingPathComponent: @"uget-plugins"],
     } mutableCopy];
     
     if (config[IM_MODULE_KEY].value.length > 0) {
@@ -263,12 +263,12 @@ static int run_geany(void) {
     int argc = fill_argv_array(argv, args);
     
     /*
-     We need to load libgeany dynamically - if we loaded it statically, it would have
+     We need to load libuget dynamically - if we loaded it statically, it would have
      been loaded by now already and the environment variables above would be set
      too late (apparently they are read already when some of the libraries are loading)
      */
     int ret = 1;
-    void *lib_handle = dlopen([[bundle_lib stringByAppendingPathComponent:@"libgeany.0.dylib"] UTF8String], RTLD_LAZY|RTLD_GLOBAL);
+    void *lib_handle = dlopen([[bundle_lib stringByAppendingPathComponent:@"libuget.0.dylib"] UTF8String], RTLD_LAZY|RTLD_GLOBAL);
     if (lib_handle) {
         int (*main_lib)(int, char**) = dlsym(lib_handle, "main_lib");
         if (main_lib) {
@@ -280,7 +280,7 @@ static int run_geany(void) {
         dlclose(lib_handle);
     }
     else {
-        NSLog(@"dlopen() failed (possibly unsigned libgeany.0.dylib)");
+        NSLog(@"dlopen() failed (possibly unsigned libuget.0.dylib)");
     }
     
     return ret;
@@ -289,6 +289,6 @@ static int run_geany(void) {
 
 int main(int argc, const char *argv[]) {
     @autoreleasepool {
-        return run_geany();
+        return run_uget();
     }
 }

@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B12DCC472350EF9300301186 /* geany */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = geany; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12DCC472350EF9300301186 /* uget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = uget; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12DCC4A2350EF9300301186 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		B12DCC3E2350EF9300301186 = {
 			isa = PBXGroup;
 			children = (
-				B12DCC492350EF9300301186 /* geany */,
+				B12DCC492350EF9300301186 /* uget */,
 				B12DCC482350EF9300301186 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		B12DCC482350EF9300301186 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B12DCC472350EF9300301186 /* geany */,
+				B12DCC472350EF9300301186 /* uget */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B12DCC492350EF9300301186 /* geany */ = {
+		B12DCC492350EF9300301186 /* uget */ = {
 			isa = PBXGroup;
 			children = (
 				B12DCC4A2350EF9300301186 /* main.m */,
 			);
-			path = geany;
+			path = uget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B12DCC462350EF9300301186 /* geany */ = {
+		B12DCC462350EF9300301186 /* uget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B12DCC4E2350EF9300301186 /* Build configuration list for PBXNativeTarget "geany" */;
+			buildConfigurationList = B12DCC4E2350EF9300301186 /* Build configuration list for PBXNativeTarget "uget" */;
 			buildPhases = (
 				B12DCC432350EF9300301186 /* Sources */,
 				B12DCC442350EF9300301186 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = geany;
-			productName = geany;
-			productReference = B12DCC472350EF9300301186 /* geany */;
+			name = uget;
+			productName = uget;
+			productReference = B12DCC472350EF9300301186 /* uget */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B12DCC422350EF9300301186 /* Build configuration list for PBXProject "geany" */;
+			buildConfigurationList = B12DCC422350EF9300301186 /* Build configuration list for PBXProject "uget" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,7 +110,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B12DCC462350EF9300301186 /* geany */,
+				B12DCC462350EF9300301186 /* uget */,
 			);
 		};
 /* End PBXProject section */
@@ -269,7 +269,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B12DCC422350EF9300301186 /* Build configuration list for PBXProject "geany" */ = {
+		B12DCC422350EF9300301186 /* Build configuration list for PBXProject "uget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B12DCC4C2350EF9300301186 /* Debug */,
@@ -278,7 +278,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B12DCC4E2350EF9300301186 /* Build configuration list for PBXNativeTarget "geany" */ = {
+		B12DCC4E2350EF9300301186 /* Build configuration list for PBXNativeTarget "uget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B12DCC4F2350EF9300301186 /* Debug */,

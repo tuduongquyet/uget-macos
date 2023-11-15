@@ -14,11 +14,11 @@
 	<key>CFBundleName</key>
 	<string>uGet</string>
 	<key>CFBundleExecutable</key>
-	<string>geany</string>
+	<string>uget</string>
 	<key>CFBundleIconFile</key>
 	<string>uGet.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.geany.geany</string>
+	<string>org.uget.uget</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -36,14 +36,14 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 
-	<!-- Register .geany extension in the system -->
+	<!-- Register .uget extension in the system -->
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
 			<key>UTTypeIdentifier</key>
-			<string>org.geany.geany</string>
+			<string>org.uget.uget</string>
 			<key>UTTypeReferenceURL</key>
-			<string>https://www.geany.org/</string>
+			<string>https://www.uget.org/</string>
 			<key>UTTypeDescription</key>
 			<string>uGet project</string>
 			<key>UTTypeIconFile</key>
@@ -56,15 +56,15 @@
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>com.apple.ostype</key>
-				<string>GEANY</string>
+				<string>uget</string>
 				<key>public.filename-extension</key>
 				<array>
-					<string>geany</string>
-					<string>GEANY</string>
+					<string>uget</string>
+					<string>uget</string>
 				</array>
 				<key>public.mime-type</key>
 				<array>
-					<string>text/x-geany</string>
+					<string>text/x-uget</string>
 				</array>
 			</dict>
 			
@@ -73,7 +73,7 @@
 
 	<key>CFBundleDocumentTypes</key>
 	<array>
-		<!-- Register uGet as editor/owner of the .geany extension -->
+		<!-- Register uGet as editor/owner of the .uget extension -->
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -83,23 +83,23 @@
 			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>org.geany.geany</string>
+				<string>org.uget.uget</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
 			<string>uGet.icns</string>
 			<key>CFBundleTypeExtensions</key>
 			<array>
-				<string>geany</string>
+				<string>uget</string>
 			</array>
 			<key>CFBundleTypeName</key>
 			<string>uGet project</string>
 			<key>CFBundleTypeMIMETypes</key>
 			<array>
-				<string>text/x-geany</string>
+				<string>text/x-uget</string>
 			</array>
 			<key>CFBundleTypeOSTypes</key>
 			<array>
-				<string>GEANY</string>
+				<string>uget</string>
 			</array>
 		</dict>
 		

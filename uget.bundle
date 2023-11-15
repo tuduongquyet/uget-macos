@@ -33,7 +33,7 @@
          not needed. If the source path is left out, the default
          script will be used.
     -->
-    <launcher-script>${project}/Launcher/geany/build/Release/geany</launcher-script >
+    <launcher-script>${project}/Launcher/uget/build/Release/uget</launcher-script >
 
     <!-- Not implemented: Optional runtime, could be python or mono
          for example.
@@ -50,7 +50,7 @@
   -->
   <plist>${project}/Info.plist</plist>
 
-  <main-binary>${prefix}/bin/geany</main-binary>
+  <main-binary>${prefix}/bin/uget</main-binary>
 
 <!-- And the print backends -->
   <binary>
@@ -78,12 +78,12 @@
 
   <!-- uGet's plugins -->
   <binary>
-    ${prefix}/lib/geany/*.so
+    ${prefix}/lib/uget/*.so
   </binary>
 
   <!-- uGetlua -->
   <binary>
-    ${prefix}/lib/geany-plugins/geanylua/*.so
+    ${prefix}/lib/uget-plugins/ugetlua/*.so
   </binary>
 
   <!-- Translation filenames, one for each program or library that you
@@ -114,10 +114,10 @@
   <translations name="vte-2.91">
     ${prefix}/share/locale
   </translations>
-  <translations name="geany">
+  <translations name="uget">
     ${prefix}/share/locale
   </translations>
-  <translations name="geany-plugins">
+  <translations name="uget-plugins">
     ${prefix}/share/locale
   </translations>
 
@@ -131,19 +131,19 @@
 
   <!-- uGet's data files; glade, fildefs, default tags, etc. -->
   <data>
-    ${prefix}/share/geany
+    ${prefix}/share/uget
   </data>
   <!-- uGet plugin's data files -->
   <data>
-    ${prefix}/share/geany-plugins
+    ${prefix}/share/uget-plugins
   </data>
   <!-- uGet documentation -->
   <data>
-    ${prefix}/share/doc/geany
+    ${prefix}/share/doc/uget
   </data>
   <!-- uGet plugin documentation -->
   <data>
-    ${prefix}/share/doc/geany-plugins
+    ${prefix}/share/doc/uget-plugins
   </data>
   <!-- mime data -->
   <data>
