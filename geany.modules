@@ -17,7 +17,7 @@
   <repository type="tarball" name="lua.org"
               href="https://www.lua.org/ftp/"/>
   <repository type="git" name="github-ssh"
-              href="git@github.com"/>
+              href="ssh://git@ssh.github.com:443"/>
 
   <include href="https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/modulesets-stable/gtk-osx.modules" />
 
@@ -47,7 +47,7 @@
 
   <metamodule id="geany-deps">
     <dependencies>
-      <dep package="meta-gtk-osx-gtk3-core-themes" />
+      <dep package="meta-gtk-osx-gtk3" />
       <dep package="gtk-mac-bundler" />
       <dep package="gtk-mac-integration-fixed" />
       <dep package="openssl" />
@@ -55,30 +55,24 @@
   </metamodule>
 
   <!-- Geany from git master - use tarball download otherwise patches don't work -->
-  <cmake id="geany-git" cmakeargs="-DCMAKE_BUILD_TYPE=Release">
-    <branch repo="github-ssh"
-            module="tuduongquyet/uget2"
-            checkoutdir="uget2-git"
-            tag="3c0d448d9ca4a9bfe1c753f253ad4300c80df27c" >
+  <autotools id="geany-git">
+    <branch repo="github-ssh" autogen-sh="autoreconf" supports-non-srcdir-builds="no"
+            module="tuduongquyet/uget2.git"
+            tag="f4f21799d534cb7820a08f8bbdbccf99c75f2605" >
     </branch>
     <dependencies>
       <dep package="geany-deps" />
     </dependencies>
-  </cmake>
+  </autotools>
 
   <!-- Geany tarball release -->
   <autotools id="geany-release"
-             autogenargs="--enable-mac-integration"
+             autogen-sh="configure"
              supports-non-srcdir-builds="no">
-    <branch repo="download.geany.org"
-            module="geany-${version}.tar.bz2"
-            checkoutdir="geany-${version}"
-            version="2.0">
-      <!-- This patch corresponds to https://github.com/geany/geany/pull/2363 -->
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_config_shell.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_scintilla_candidate_window_pos.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_vte_login_shell.patch" strip="1" />
-      <patch file="https://github.com/geany/geany-osx/raw/master/geany_patches/geany_scintilla_block_copy.patch" strip="1" />
+    <branch repo="download.github.com"
+            module="tuduongquyet/uget2/releases/download/v2.2.3/uget-2.2.3.tar.gz"
+            version="2.2.3"
+            hash="sha256:10f7fd2ae646bfa194916154efde77700d4a02e6bd8eeea8df3c57c6c83efab4">
     </branch>
     <dependencies>
       <dep package="geany-deps" />
