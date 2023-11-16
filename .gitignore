@@ -1,7 +1,7 @@
 uGet*.app
 uGet*.dmg
 uGet.icns
-Launcher/uget/build/
+launcher/uget/build/
 xcuserdata/
 .DS_Store
 *.uget

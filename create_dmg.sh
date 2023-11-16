@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="2.0"
+VERSION="2.2.3"
 
 NAME="uGet"
 ICONNAME="uGet.icns"
@@ -9,7 +9,7 @@ DMGNAME="uget-${VERSION}_osx.dmg"
 APPNAME="${NAME}.app"
 TMPDIR="tmp-out"
 
-FILE_TYPE=`file uGet.app/Contents/MacOS/uget`
+FILE_TYPE=`file uGet.app/Contents/MacOS/uGet`
 if [[ "$FILE_TYPE" == *"arm64"* ]]; then
 	DMGNAME="uget-${VERSION}_osx_arm64.dmg"
 fi

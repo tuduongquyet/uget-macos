@@ -29,7 +29,7 @@
             module="gtk-mac-integration/3.0/gtk-mac-integration-${version}.tar.xz"
             checkoutdir="gtk-mac-integration-fixed"
             version="3.0.1">
-      <patch file="https://github.com/uget/uget-osx/raw/master/uget_patches/gtk_mac_integration_radio_fix.patch" strip="1" />
+      <patch file="https://github.com/tuduongquyet/uget-osx/raw/master/patches/gtk_mac_integration_radio_fix.patch" strip="1" />
     </branch>
   </autotools>  
   
