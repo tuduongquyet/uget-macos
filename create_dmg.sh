@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="2.2.3"
+VERSION="2.2.4"
 
 NAME="uGet"
 ICONNAME="uGet.icns"

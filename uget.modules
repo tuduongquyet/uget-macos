@@ -56,7 +56,7 @@
 
   <!-- uGet from git master - use tarball download otherwise patches don't work -->
   <autotools id="uget-git">
-    <branch repo="github-ssh" autogen-sh="autoreconf" supports-non-srcdir-builds="no"
+    <branch repo="github-ssh" autogen-sh="autoreconf" autogenargs="--disable-notify --disable-gstreamer" supports-non-srcdir-builds="no"
             module="tuduongquyet/uget2.git"
             tag="f4f21799d534cb7820a08f8bbdbccf99c75f2605" >
     </branch>
@@ -68,11 +68,12 @@
   <!-- uGet tarball release -->
   <autotools id="uget-release"
              autogen-sh="configure"
+             autogenargs="--disable-notify --disable-gstreamer"
              supports-non-srcdir-builds="no">
     <branch repo="download.github.com"
-            module="tuduongquyet/uget2/releases/download/v2.2.3/uget-2.2.3.tar.gz"
-            version="2.2.3"
-            hash="sha256:10f7fd2ae646bfa194916154efde77700d4a02e6bd8eeea8df3c57c6c83efab4">
+            module="tuduongquyet/uget2/releases/download/v2.2.4/uget-2.2.4.tar.gz"
+            version="2.2.4"
+            hash="sha256:4bed8c0a2f5bb5cfb5635d2ba38d8502c15e5261c909a90c1d31700c7d86a627">
     </branch>
     <dependencies>
       <dep package="uget-deps" />
