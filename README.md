@@ -71,7 +71,7 @@ To create the bundle, you first need to install JHBuild and GTK as described bel
 
 2. When cross-compiling x86_64 binaries on a new ARM-based Apple computer, run:
 
- ```
+```bash
 env /usr/bin/arch -x86_64 /bin/zsh --login
 ```
 
@@ -79,7 +79,7 @@ to create an x86_64 shell. All compilation steps below must be executed in this 
 
 3. Depending on the shell used, add the following lines to `.zprofile` or `.bash_profile` to define these variables and restart your shell:
 
- ```
+```bash
 export PATH=$PATH:"$HOME/.new_local/bin"
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
@@ -87,19 +87,19 @@ export LANG=en_US.UTF-8
 
 4. Get `gtk-osx-setup.sh` by running:
 
- ```
+```bash
 curl -L -o gtk-osx-setup.sh https://gitlab.gnome.org/GNOME/gtk-osx/raw/master/gtk-osx-setup.sh
 ```
 
 And run it:
 
- ```  
+```bash  
 bash gtk-osx-setup.sh
 ```
 
 5. Add the following lines to `~/.config/jhbuildrc-custom`:
 
- ```
+```bash
 setup_sdk(target="10.13", architectures=["x86_64"]) 
 #setup_sdk(target="11", architectures=["arm64"])
 setup_release() # enables optimizations
@@ -109,13 +109,13 @@ With these settings, the build creates a 64-bit Intel binary that works on macOS
 
 6. Install GTK and all its dependencies by running the following command inside the `uget-osx` directory:
 
- ```
+```bash
 jhbuild bootstrap-gtk-osx && jhbuild build meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
 ```
 
 If the upstream project fails to build, use our snapshot of modulesets that was used to build the last uGet release:
 
- ```
+```bash
 jhbuild bootstrap-gtk-osx && jhbuild -m "https://raw.githubusercontent.com/uget/uget-osx/master/modulesets-stable/gtk-osx.modules" build meta-gtk-osx-bootstrap meta-gtk-osx-gtk3
 ```
 
@@ -123,13 +123,13 @@ jhbuild bootstrap-gtk-osx && jhbuild -m "https://raw.githubusercontent.com/uget/
 
 * **tarball**  
 
-  ```
+  ```bash
   jhbuild -m `pwd`/uget.modules build uget-bundle-release
   ```
 
 * **git master**
 
-  ```
+  ```bash
   jhbuild -m `pwd`/uget.modules build uget-bundle-git
   ```
 
@@ -138,7 +138,7 @@ Bundling
 
 1. Build the launcher binary by running:
 
- ```
+```bash
 xcodebuild ARCHS=`uname -m` -project launcher/uget/uget.xcodeproj clean build
 ```
 
@@ -146,7 +146,7 @@ inside `uget-osx`.
 
 2. Start the jhbuild shell:
 
- ```
+```bash
 jhbuild shell
 ```
 
@@ -156,7 +156,7 @@ jhbuild shell
 
 4. Inside `uget-osx`, create the app bundle:
 
- ```
+```bash
 ./bundle.sh
 ```
 
@@ -164,19 +164,19 @@ jhbuild shell
 
 6. Optionally, to sign the resulting bundle with a development Apple account, get the signing identities:
 
- ```
+```bash
 security find-identity -p codesigning
 ```
 
 Use the whole string within apostrophes containing "Developer ID Application: ..." in:
 
- ```
+```bash
 export SIGN_CERTIFICATE="Developer ID Application: ..." 
 ```
 
 Then run:
 
- ```
+```bash
 ./sign.sh
 ```
 
@@ -187,7 +187,7 @@ Distribution
 
 2. Create the dmg installation image by running:
 
- ```
+```bash
 ./create_dmg.sh
 ```
 
@@ -195,7 +195,7 @@ from `uget-osx`. If `SIGN_CERTIFICATE` is defined, the image gets signed.
 
 3. Optionally, to get the image notarized by [Apple notary service](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution), run:
 
- ```
+```bash
 ./notarize.sh <dmg_file> <apple_id> 
 ```
 
@@ -214,10 +214,17 @@ Some maintenance activities not required for normal bundle/installer creation:
 
 * To ensure nothing is left from a previous build when making a new release, run:
 
- ```
+```bash
 rm -rf .new_local .local Source gtk .cache/jhbuild
 ```
 
 ---
 
-Tu Duong Quuet, 2023
+Basis
+=====
+
+This repository builds on the work done in the `geany` project:
+
+<https://github.com/geany/geany-osx>
+
+The geany-osx repository contains instructions and scripts for building and packaging the Geany text editor for macOS. This uGet-osx repository adapts those instructions for building uGet instead.
