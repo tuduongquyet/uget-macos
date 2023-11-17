@@ -71,9 +71,9 @@
              autogenargs="--disable-notify --disable-gstreamer"
              supports-non-srcdir-builds="no">
     <branch repo="download.github.com"
-            module="tuduongquyet/uget2/releases/download/v2.2.4/uget-2.2.4.tar.gz"
-            version="2.2.4"
-            hash="sha256:4bed8c0a2f5bb5cfb5635d2ba38d8502c15e5261c909a90c1d31700c7d86a627">
+            module="tuduongquyet/uget2/releases/download/v2.2.3/uget-2.2.3.tar.gz"
+            version="2.2.3"
+            hash="sha256:10ef0c385448d561644ddd68ba7182e090f86a9d3d5aaa744320543cb8602c6b">
     </branch>
     <dependencies>
       <dep package="uget-deps" />
