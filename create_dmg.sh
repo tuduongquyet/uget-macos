@@ -12,6 +12,8 @@ TMPDIR="tmp-out"
 FILE_TYPE=`file uGet.app/Contents/MacOS/uGet`
 if [[ "$FILE_TYPE" == *"arm64"* ]]; then
 	DMGNAME="uget-${VERSION}_osx_arm64.dmg"
+else
+	DMGNAME="uget-${VERSION}_osx_x86_64.dmg"
 fi
 
 mkdir "$TMPDIR"

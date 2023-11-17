@@ -1,0 +1,63 @@
+#!/bin/bash
+
+set -eu
+
+LOG_DIR=/private/var/log/uget-installer
+
+mkdir -p $LOG_DIR
+exec 2>&1 > $LOG_DIR/postinstall.log
+
+if [ -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.firefox.json" ]; then
+  # Install the firefox native messaging manifest
+  mkdir -p "/Library/Application Support/Mozilla/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.firefox.json" "/Library/Application Support/Mozilla/NativeMessagingHosts/com.ugetdm.firefox.json"
+fi
+
+if [ -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" ]; then
+  # Install the Chrome native messaging manifest
+  mkdir -p "/Library/Google/Chrome/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Google/Chrome/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the Chromium native messaging manifest
+  mkdir -p "/Library/Application Support/Chromium/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Application Support/Chromium/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the Vivaldi native messaging manifest
+  mkdir -p "/Library/Application Support/Vivaldi/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Application Support/Vivaldi/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the brave native messaging manifest
+  mkdir -p "/Library/Application Support/BraveSoftware/Brave-Browser/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Application Support/BraveSoftware/Brave-Browser/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the Opera native messaging manifest
+  mkdir -p "/Library/Application Support/Opera/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Application Support/Opera/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the Iridium native messaging manifest
+  mkdir -p "/Library/Application Support/Iridium/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Application Support/Iridium/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the Microsoft Edge native messaging manifest
+  mkdir -p "/Library/Microsoft/Edge/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Microsoft/Edge/NativeMessagingHosts/com.ugetdm.chrome.json"
+
+  # Install the Slimjet native messaging manifest
+  mkdir -p "/Library/Application Support/Slimjet/NativeMessagingHosts"
+  cp -f "/Applications/uGet.app/Contents/Resources/NativeMessagingHosts/com.ugetdm.chrome.json" "/Library/Application Support/Slimjet/NativeMessagingHosts/com.ugetdm.chrome.json"
+fi
+
+if [ ! -d "/usr/local/bin" ]; then
+  mkdir -p "/usr/local/bin"
+fi
+
+if [ -e "/usr/local/bin/uget-gtk" ]; then
+  rm -f "/usr/local/bin/uget-gtk"
+fi
+
+if [ -e "/usr/local/bin/uget-integrator" ]; then
+  rm -f "/usr/local/bin/uget-integrator"
+fi
+
+ln -s "/Applications/uGet.app/Contents/MacOS/uGet" "/usr/local/bin/uget-gtk"
+ln -s "/Applications/uGet.app/Contents/MacOS/uget-integrator" "/usr/local/bin/uget-integrator"
