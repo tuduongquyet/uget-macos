@@ -73,7 +73,7 @@
     <branch repo="download.github.com"
             module="tuduongquyet/uget2/releases/download/v2.2.3/uget-2.2.3.tar.gz"
             version="2.2.3"
-            hash="sha256:10ef0c385448d561644ddd68ba7182e090f86a9d3d5aaa744320543cb8602c6b">
+            hash="sha256:6b6e5943a9af6a3a2291f8bb27b092335347793e392cfd5fccda2950a1f62905">
     </branch>
     <dependencies>
       <dep package="uget-deps" />
